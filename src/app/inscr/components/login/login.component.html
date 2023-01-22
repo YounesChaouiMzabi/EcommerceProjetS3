@@ -1,0 +1,28 @@
+<div>
+  <br>
+  <h2 class ="text-center">S'authentifier</h2>
+  <form #userForm="ngForm" (ngSubmit)="login(userForm)" >
+    <div class="form-group">
+      <label for="emailInput">Adresse email</label>
+      <input type="email" class="form-control" #email="ngModel" id="emailInput" placeholder="Email" ngModel name="email" required email>
+      <div class ="alert alert-danger" *ngIf="email.touched && email.errors?.['required']">email is required</div>
+      <div class ="alert alert-danger" *ngIf="email.touched && email.errors?.['email']">format incorrecte</div>
+    </div>
+    <div class="form-group">
+      <label for="passwordInput">password</label>
+      <input type="password" class="form-control" #password="ngModel" id="passwordInput" placeholder="Password" ngModel name="password" required minlength="6">
+      <div class ="alert alert-danger" *ngIf="password.touched && password.errors?.['required']">password is required</div>
+      <div class ="alert alert-danger" *ngIf="password.touched && password.errors?.['minlength']">format incorrecte +6 characteres</div>
+    </div>
+    <br>
+    <div style="text-align:center;">
+      <button class="btn btn-primary" [disabled]="userForm.invalid " >Valider</button>
+    </div>
+  </form>
+  <br>
+
+</div>
+
+
+
+

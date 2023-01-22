@@ -1,0 +1,36 @@
+<div id="shopping-cart">
+  <h2>Mon panier</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>Image</th>
+      <th>Nom</th>
+      <th>Prix unitaire</th>
+      <th>Quantité</th>
+      <th>Prix</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of cardProducts; let index = index ">
+      <td><img src="{{item.item.image}}" alt="Product 1"></td>
+      <td>{{item.item.title}}</td>
+      <td>{{item.item.price}}</td>
+      <td>
+        <button class = "btn btn-dark" (click)="addAmount(index)">+</button>
+        <input type="number" value="1" (change)="detectChanges()"  [(ngModel)]="item.quantity" >
+        <button class = "btn btn-dark" (click)="minsAmount(index)">-</button>
+      </td>
+      <td>{{item.item.price * item.quantity}}</td>
+      <td>
+        <button (click)="deleteProduct(index)">Supprimer</button>
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+  <p>Total: {{total}}</p>
+  <button>Payer</button>
+  <button (click)="clearCard()" >ClearCard</button>
+</div>
+

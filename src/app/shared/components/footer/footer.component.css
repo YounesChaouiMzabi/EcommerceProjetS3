@@ -1,0 +1,18 @@
+/* FOOTER */
+
+footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 20px 0 40px;
+}
+
+footer span {
+  color: #817673;
+  font-size: 25px;
+}
+
+footer h5 {
+  color: white;
+  font-weight: normal;
+}

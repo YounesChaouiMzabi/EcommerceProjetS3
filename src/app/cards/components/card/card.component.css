@@ -1,0 +1,49 @@
+#shopping-cart {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+#shopping-cart h2 {
+  color: #333;
+}
+#shopping-cart table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#shopping-cart td,
+#shopping-cart th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#shopping-cart tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#shopping-cart tr:hover {
+  background-color: #ddd;
+}
+#shopping-cart th {
+  background-color: #817673;
+  color: white;
+}
+#shopping-cart input[type="number"] {
+  width: 50px;
+}
+#shopping-cart button {
+  background-color: #3f4f3f;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+img {
+  width: 100px; /* La largeur du cercle sera de 100 pixels */
+  height: 100px; /* La hauteur du cercle sera de 100 pixels */
+  border-radius: 50%; /* Crée un cercle autour de l'image */
+}
+
+
